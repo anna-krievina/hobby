@@ -1,0 +1,29 @@
+﻿@model WebProjects.Models.TicGameBoard
+@{
+}
+
+@section Scripts {
+    <script src="~/js/tictactoe.js" asp-append-version="true"></script>
+    <link rel="stylesheet" href="~/css/tictactoe.css" asp-append-version="true" />
+}
+<div id="board">
+    <table id="boardTable">
+        <tr>
+            <td id="cell1" class="ticCell"></td>
+            <td id="cell2" class="ticCell"></td>
+            <td id="cell3" class="ticCell"></td>
+        </tr>
+        <tr>
+            <td id="cell4" class="ticCell"></td>
+            <td id="cell5" class="ticCell"></td>
+            <td id="cell6" class="ticCell"></td>
+        </tr>
+        <tr>
+            <td id="cell7" class="ticCell"></td>
+            <td id="cell8" class="ticCell"></td>
+            <td id="cell9" class="ticCell"></td>
+        </tr>
+    </table>
+    <br/>
+    <p id="resultField"></p>
+</div>

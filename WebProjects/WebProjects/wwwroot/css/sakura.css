@@ -1,0 +1,14 @@
+﻿#centerCanvasDiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#containerCanvas {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: black;
+}body {
+}
