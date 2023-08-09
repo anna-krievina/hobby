@@ -2,7 +2,7 @@ var canvasObject = {
     canvas: document.getElementById("containerCanvas"),
     start: function () {
         this.context = this.canvas.getContext("2d");
-        this.interval = setInterval(redrawCanvas, 5000);
+        this.interval = setInterval(redrawCanvas, 1000);
     },
     clear: function () {
         this.context = this.canvas.getContext("2d");
