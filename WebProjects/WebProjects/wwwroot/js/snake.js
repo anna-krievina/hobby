@@ -96,28 +96,31 @@ function moveSnake() {
     var doty = dot.y;
     var snakex = snakeArray[0].x;
     var snakey = snakeArray[0].y;
+    // check for collision 
+    if ((dotx >= snakex - pixelSize && dotx <= snakex + pixelSize) && (doty >= snakey - pixelSize && doty <= snakey + pixelSize)) {
+        // add to snake
+        var newSnakex = snakeArray[snakeArrayLength - 1].x - pixelSize;
+        var newSnakey = snakeArray[snakeArrayLength - 1].y;
+        snakeArray.push(new component(pixelSize, pixelSize, snakeColor, newSnakex, newSnakey));
+        snakeArrayLength++;
+
+        generateDot();
+    } else {
+        dot.update();
+    }
     // left = this.x;
     // right = this.x + (this.width);
     // top = this.y;
     // bottom = this.y + (this.height);
+    // add speed
     if (dotx > snakex && dotx + pixelSize > snakex) {
-        snakex += 1;
+        snakex += 0.7;
     } else if (doty > snakey && doty + pixelSize > snakey) {
-        snakey += 1;
+        snakey += 0.7;
     } else if (dotx < snakex && dotx + pixelSize < snakex) {
-        snakex -= 1;
+        snakex -= 0.7;
     } else if (doty < snakey && doty + pixelSize < snakey) {
-        snakey -= 1;
-    }
-    // check for collision 
-    if ((dotx >= snakex - pixelSize && dotx <= snakex + pixelSize) && (doty >= snakey - pixelSize && doty <= snakey + pixelSize)) {
-        // this didn't work and decided it doesn't need to work
-        // var newSnakex = snakeArray[snakeArrayLength - 1].x - pixelSize;
-        // var newSnakey = snakeArray[snakeArrayLength - 1].y;
-        // snakeArray.push(new component(pixelSize, pixelSize, snakeColor, newSnakex, newSnakey));
-        generateDot();
-    } else {
-        dot.update();
+        snakey -= 0.7;
     }
     updateSnake(snakex, snakey);
 }
