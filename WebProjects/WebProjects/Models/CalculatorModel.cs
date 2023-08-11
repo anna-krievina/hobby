@@ -10,6 +10,7 @@
         public const string Undo = "⌫";
         public const string Reset = "C";
         public const string Result = "=";
+        public const string Negate = "+/-";
 
         public string[] Operation = { Add, Subtract, Multipy, Divide };
         public string[] Action = { Undo, Reset, Result };

@@ -48,5 +48,18 @@ namespace WebProjects.Controllers
             }
             return result;
         }
+        
+        [HttpPost("/Calculator/NegateResult")]
+        public string NegateResult(string result)
+        {
+            string[] resultArray = result.Split(' ');
+            if (resultArray.Length > 0 )
+            {
+                    int firstNumber = int.Parse(resultArray[0]);
+                    int resultNumber = 0 - firstNumber;
+                    result = resultNumber.ToString();
+            }
+            return result;
+        }
     }
 }

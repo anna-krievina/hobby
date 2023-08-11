@@ -11,7 +11,7 @@
 <body>
     <div id="centerContainerDiv">
         <div id="resultFieldDiv">
-            <input id="resultField" maxlength="22" type="text" readonly="readonly" Value=""/>
+            <input id="resultField" maxlength="22" type="text" readonly="readonly" Value="0"/>
         </div>
         <div id="ActionsDiv">
             @for (int i = 0; i < Model.Operation.Length; i++)
@@ -33,6 +33,10 @@
                     <br />
                 }
             }
+            @*Last row is special*@
+            <input type="button" class="calcButton calcAction" value="@CalculatorModel.Negate" />
+            <input type="button" class="calcButton calcAction" value="0" />
+
         </div>
     </div>
 </body>
